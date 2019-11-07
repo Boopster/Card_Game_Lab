@@ -37,11 +37,12 @@ public class Game {
 
     public String getResult(Player player1, Player player2) {
         if (player1.getPlayerHand().getValueFromEnum() > player2.getPlayerHand().getValueFromEnum()) {
-            return "Player 1 is the winner!";
+            String output = String.format("%s is the winner!", player1.getName());
+            return output;
         } else if (player1.getPlayerHand().getValueFromEnum() == player2.getPlayerHand().getValueFromEnum()) {
                 return "It's a draw!";
             } else {
-                return "Player 2 is the winner!";
+                return "The dealer is the winner!";
             }
         }
     }
