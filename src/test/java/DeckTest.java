@@ -9,9 +9,7 @@ public class DeckTest {
 
     @Before
     public void before() {
-
         deck = new Deck();
-
     }
 
     @Test
@@ -23,6 +21,23 @@ public class DeckTest {
     public void canPopulateDeck() {
         deck.populateDeck();
         assertEquals(52, deck.countCards());
+    }
+
+    @Test
+    public void canShuffleDeck() {
+        deck.populateDeck();
+        deck.shuffleDeck();
+        assertEquals(deck.getCards(),deck.getCards());
+
+    }
+
+    @Test
+    public void canDealCard() {
+        deck.populateDeck();
+        deck.shuffleDeck();
+        deck.dealCard();
+//        Card card = deck.dealCard();
+        assertEquals(51, deck.countCards());
     }
 
 }
