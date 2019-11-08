@@ -29,9 +29,10 @@ public class Game {
         deck.populateDeck();
         deck.shuffleDeck();
         for (Player player: players) {
-            Card card = deck.dealCard();
-            player.addCardToPlayerHand(card);
-            player.addCardToPlayerHand(card);
+            Card card1 = deck.dealCard();
+            Card card2 = deck.dealCard();
+            player.addCardToPlayerHand(card1);
+            player.addCardToPlayerHand(card2);
         }
     }
 
