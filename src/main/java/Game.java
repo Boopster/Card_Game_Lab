@@ -35,6 +35,8 @@ public class Game {
         }
     }
 
+
+
 //    public String getResult(Player player1, Player player2) {
 //        if (player1.getPlayerHand().getValueFromEnum() > player2.getPlayerHand().getValueFromEnum()) {
 //            String output = String.format("%s is the winner!", player1.getName());

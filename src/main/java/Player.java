@@ -10,14 +10,10 @@ public class Player {
         this.name = name;
     }
 
-//    public Card getPlayerHand() {
-//
-//        return this.playerHand;
-//    }
-//
-//    public void setPlayerHand(Card playerHand) {
-//        this.playerHand = playerHand;
-//    }
+    public String getName() {
+        return name;
+    }
+
 
     public int countNoCardsPlayerHand() {
         return this.playerHand.size();
@@ -27,8 +23,13 @@ public class Player {
         this.playerHand.add(card);
     }
 
-    public String getName() {
-        return name;
+    public int getTotalPlayerHand() {
+        int i = 0;
+        for(Card card:playerHand) {
+            i += card.getValueFromEnum();
+        }
+        return i;
     }
 
 }
+

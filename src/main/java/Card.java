@@ -23,5 +23,10 @@ public class Card {
         return this.rank.getValue();
     }
 
+    public int getOtherValueFromEnum() {
+
+        return this.rank.getOtherValue();
+    }
+
 }
 

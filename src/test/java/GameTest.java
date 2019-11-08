@@ -34,11 +34,14 @@ public class GameTest {
         assertEquals(2, player2.countNoCardsPlayerHand());
     }
 
+    @Test
+    public void canGetTotalPlayerHand() {
+        System.out.println(player1.getName() + "'s hand: " + player1.getTotalPlayerHand());
+        System.out.println("The Dealer's hand: " + player2.getTotalPlayerHand());
+    }
+
 //    @Test
 //    public void canDeclareResult() {
-////        game.addPlayer(player1);
-////        game.addPlayer(player2);
-////        game.addCardToHand();
 //        System.out.println("Player 1 Hand: " + player1.getPlayerHand().getValueFromEnum());
 //        System.out.println("Player 2 Hand: " + player2.getPlayerHand().getValueFromEnum());
 //        System.out.println(game.getResult(player1, player2));
