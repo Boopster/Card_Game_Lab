@@ -1,27 +1,50 @@
-Card Game Lab
-This lab is to model a basic card game and implement the rules.
+Weekend Homework - Blackjack
+⭐️ This is a PDA Homework ⭐️
 
-We aren't looking for a running game, just good TDD to demonstrate that the game works as it should.
+Extend your High/Low card game Using your existing code (fork it!) simulate a game of "BlackJack".
 
-Highest Card
+To start off with you should be working in a TDD fashion and creating tests for your classes.
+
 MVP
-Create a Deck class with an ArrayList of cards. (Deck should start of empty)
+Deal two cards to a dealer and a player
+Compare the hands
+Determine the winner from who has the highest value hand
+Extension
+Allow the player to "twist" or "stick" (Player go bust if hand value exceeds 21 and they automatically lose the round).
+Dealer will twist if hand < 16
+Compare hands once both dealer and player have stuck.
+Allow for more players to play.
+BlackJack rules
+Aces may be counted as 1 or 11 points, 2 to 9 according to card value, and tens and face cards count as ten points.
 
-Come up with a method to populate the deck of cards.
+The value of a hand is the sum of the point values of the individual cards.
 
-Find a way to shuffle the cards.
+Except, a "blackjack" is the highest hand, consisting of an ace and any 10-point card, and it outranks all other 21-point hands.
 
-Create a method to deal a card from the deck.
+To start dealer will give two cards to each player and two cards to himself. One of the dealer cards is dealt face up.
 
-Extensions
-Build a simple card game that has a dealer deal one card to every player and the player with the highest card value in their hand wins.
+Play begins with the player to the dealer's left. The following are the choices available to the player:
 
-Considerations / Restrictions.
-Think about how to model a deck of cards. What are the constituent parts?
-A deck which contains 52 cards. (What kind of data structure best models this?).
-A card with a suit and a value. (Given the suits and number of cards is fixed, this could be a job for enums).
-Can you think of a way to 'populate' the deck with cards? (A nested loop?).
-Model the game.
-Think about how to model the rules of the game (determine which hand wins etc).
-Think about how to implement the logistics of the game (deal cards, gather the players' totals, etc).
-Use test driven development. Fully test your model.
+Stand: Player stands pat with his cards.
+Twist: Player draws another card (and more if he wishes). If this card causes the player's total points to exceed 21 (known as "breaking" or "busting") then he loses.
+After each player has had his turn, the dealer will turn over his hole card. If the dealer has 16 or less, then he will draw another card.
+
+If the dealer goes over 21 points, then any player who didn't already bust will win.
+
+If the dealer does not bust, then the higher point total between the player and dealer will win.
+
+PDA Reminder:
+As part of this homework you are required to take screenshots of the following:
+
+- An example of encapsulation in a program.
+Demonstrate testing in your program. Take screenshots of:
+
+- Example of test code
+- The test code failing to pass
+- Example of the test code once errors have been corrected
+- The test code passing
+Go to your PDA Checklist
+
+Submit your PDA evidence (screenshots, etc.) to your own PDA repo
+
+PDA Reference: I.T 1, P18
