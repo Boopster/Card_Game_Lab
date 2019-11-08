@@ -15,10 +15,15 @@ public class PlayerTest {
         dealer = new Player("Dealer");
     }
 
+//    @Test
+//    public void canGetHandWhenEmpty() {
+//        assertNull(player.getPlayerHand());
+//        assertNull(dealer.getPlayerHand());
+//    }
+
     @Test
-    public void canGetHandWhenEmpty() {
-        assertNull(player.getPlayerHand());
-        assertNull(dealer.getPlayerHand());
+    public void canCountNoCardsPlayerHand() {
+        assertEquals(0, player.countNoCardsPlayerHand());
     }
 
 }

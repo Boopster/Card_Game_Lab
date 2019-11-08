@@ -25,25 +25,25 @@ public class Game {
         return this.players.size();
     }
 
-    public void addCardToHand() {
+    public void addCardsToHand() {
         deck.populateDeck();
         deck.shuffleDeck();
-//        Card card = deck.dealCard();
         for (Player player: players) {
             Card card = deck.dealCard();
-            player.setPlayerHand(card);
+            player.addCardToPlayerHand(card);
+            player.addCardToPlayerHand(card);
         }
     }
 
-    public String getResult(Player player1, Player player2) {
-        if (player1.getPlayerHand().getValueFromEnum() > player2.getPlayerHand().getValueFromEnum()) {
-            String output = String.format("%s is the winner!", player1.getName());
-            return output;
-        } else if (player1.getPlayerHand().getValueFromEnum() == player2.getPlayerHand().getValueFromEnum()) {
-                return "It's a draw!";
-            } else {
-                return "The dealer is the winner!";
-            }
-        }
+//    public String getResult(Player player1, Player player2) {
+//        if (player1.getPlayerHand().getValueFromEnum() > player2.getPlayerHand().getValueFromEnum()) {
+//            String output = String.format("%s is the winner!", player1.getName());
+//            return output;
+//        } else if (player1.getPlayerHand().getValueFromEnum() == player2.getPlayerHand().getValueFromEnum()) {
+//                return "It's a draw!";
+//            } else {
+//                return "The dealer is the winner!";
+//            }
+//        }
     }
 

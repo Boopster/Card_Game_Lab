@@ -20,34 +20,29 @@ public class GameTest {
         player2 = new Player("Lily-Rose");
         game.addPlayer(player1);
         game.addPlayer(player2);
-        game.addCardToHand();
+        game.addCardsToHand();
     }
 
     @Test
     public void canAddPlayersToGame() {
-//        game.addPlayer(player1);
-//        game.addPlayer(player2);
         assertEquals(2, game.countPlayers());
     }
 
     @Test
-    public void canDealCardToPlayer() {
-//        game.addPlayer(player1);
-//        game.addPlayer(player2);
-//        game.addCardToHand();
-        assertNotNull(player1.getPlayerHand());
-        assertNotNull(player2.getPlayerHand());
+    public void canDealCardsToPlayer() {
+        assertEquals(2, player1.countNoCardsPlayerHand());
+        assertEquals(2, player2.countNoCardsPlayerHand());
     }
 
-    @Test
-    public void canDeclareResult() {
-//        game.addPlayer(player1);
-//        game.addPlayer(player2);
-//        game.addCardToHand();
-        System.out.println("Player 1 Hand: " + player1.getPlayerHand().getValueFromEnum());
-        System.out.println("Player 2 Hand: " + player2.getPlayerHand().getValueFromEnum());
-        System.out.println(game.getResult(player1, player2));
-    }
+//    @Test
+//    public void canDeclareResult() {
+////        game.addPlayer(player1);
+////        game.addPlayer(player2);
+////        game.addCardToHand();
+//        System.out.println("Player 1 Hand: " + player1.getPlayerHand().getValueFromEnum());
+//        System.out.println("Player 2 Hand: " + player2.getPlayerHand().getValueFromEnum());
+//        System.out.println(game.getResult(player1, player2));
+//    }
 
 
 }
