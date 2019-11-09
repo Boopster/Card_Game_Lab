@@ -40,7 +40,7 @@ public class Game {
 //        if (twist.equals("y")) {
             Card card = deck.dealCard();
             player.addCardToPlayerHand(card);
-        } else {
+        } else if (twist.equals("n")){
             Card card = deck.dealCard();
             player = players.get(1);
             player.dealerTurn(card);
