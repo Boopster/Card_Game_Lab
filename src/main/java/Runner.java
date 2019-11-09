@@ -33,7 +33,7 @@ public class Runner {
 //        int total = player.getTotalPlayerHand();
 //        if (total < 21 && twist.equals("y")) {
 
-        game.playerTwist(twist, player1);
+        game.playerTwist(twist, player1, player2);
 
         if (twist.equals("y")) {
             for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {

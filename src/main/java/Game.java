@@ -34,16 +34,18 @@ public class Game {
         }
     }
 
-    public void playerTwist(String twist, Player player) {
-        int total = player.getTotalPlayerHand();
-        if (total < 21 && twist.equals("y")) {
+    public void playerTwist(String twist, Player player1, Player player2) {
+        int total1 = player1.getTotalPlayerHand();
+        int total2 = player2.getTotalPlayerHand();
+        if (total1 < 21 && twist.equals("y")) {
 //        if (twist.equals("y")) {
             Card card = deck.dealCard();
-            player.addCardToPlayerHand(card);
+            player1.addCardToPlayerHand(card);
         } else if (twist.equals("n")){
             Card card = deck.dealCard();
-            player = players.get(1);
-            player.dealerTurn(card);
+            if ( total2 < total1 )
+                card = deck.dealCard();
+                player2.addCardToPlayerHand(card);
         }
     }
 

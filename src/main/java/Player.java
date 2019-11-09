@@ -38,21 +38,21 @@ public class Player {
 
     }
 
-    public void dealerTurn(Card card) {
-        int total = this.getTotalPlayerHand();
-        do {
-            this.addCardToPlayerHand(card);
-            total = this.getTotalPlayerHand();
-        }
-        while (total < 16 && total <= 21);
-    }
+//    public void dealerTurn(Card card) {
+//        int total = this.getTotalPlayerHand();
+//        do {
+//            this.addCardToPlayerHand(card);
+//            total = this.getTotalPlayerHand();
+//        }
+//        while (total < 16 && total <= 21);
+//    }
 
-    public String getCardsDealerHand() {
-        String output = null;
-        Card card1 = playerHand.get(0);
-        Card card2 = playerHand.get(1);
-        return output = String.format("The dealer's hand - %s %s : ??????", card1.getRank(), card1.getSuit());
-    }
+//    public String getCardsDealerHand() {
+//        String output = null;
+//        Card card1 = playerHand.get(0);
+//        Card card2 = playerHand.get(1);
+//        return output = String.format("The dealer's hand - %s %s : ??????", card1.getRank(), card1.getSuit());
+//    }
 
 }
 
