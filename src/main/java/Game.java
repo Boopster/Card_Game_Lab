@@ -42,20 +42,7 @@ public class Game {
         this.addCardToHand();
     }
 
-//    public void playerTwist(String twist, Player player1, Player player2) {
     public void playerTwist(Player player) {
-//        int total1 = player1.getTotalPlayerHand();
-//        int total2 = player2.getTotalPlayerHand();
-//        if (total1 < 21 && twist.equals("y")) {
-//        if (total1 < 21) {
-//            Card card = deck.dealCard();
-//            player1.addCardToPlayerHand(card);
-//        } else if (twist.equals("n")){
-//            Card card = deck.dealCard();
-//            if ( total2 < total1 )
-//                card = deck.dealCard();
-//                player2.addCardToPlayerHand(card);
-//        }
         Card card = deck.dealCard();
         player.addCardToPlayerHand(card);
     }
