@@ -35,9 +35,15 @@ public class Game {
     }
 
     public void playerTwist(String twist, Player player) {
-        if (twist.equals("y")) {
+        int total = player.getTotalPlayerHand();
+        if (total < 21 && twist.equals("y")) {
+//        if (twist.equals("y")) {
             Card card = deck.dealCard();
             player.addCardToPlayerHand(card);
+        } else {
+            Card card = deck.dealCard();
+            player = players.get(1);
+            player.dealerTurn(card);
         }
     }
 

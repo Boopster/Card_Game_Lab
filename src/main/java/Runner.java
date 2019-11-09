@@ -27,18 +27,34 @@ public class Runner {
             System.out.println(player1.showCard(i));
         }
         System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getTotalPlayerHand()));
-        System.out.println(player2.getCardsDealerHand());
+//        System.out.println(player2.getCardsDealerHand());
 
         System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
 
         String twist = scanner.next();
 
         game.playerTwist(twist, player1);
-//
+
         for(int i = 0; i < player1.countNoCardsPlayerHand(); i ++){
             System.out.println(player1.showCard(i));
         }
         System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getTotalPlayerHand()));
+
+        System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
+
+        twist = scanner.next();
+
+        game.playerTwist(twist, player1);
+
+        for(int i = 0; i < player1.countNoCardsPlayerHand(); i ++){
+            System.out.println(player1.showCard(i));
+        }
+        System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getTotalPlayerHand()));
+
+        for(int i = 0; i < player2.countNoCardsPlayerHand(); i ++){
+            System.out.println(player2.showCard(i));
+        }
+        System.out.println(String.format("The Dealer's Total: %s", player2.getTotalPlayerHand()));
 
 //        System.out.println(player2.getCardsPlayerHand());
 //        System.out.println(player1.getName() + "'s hand: " + player1.getPlayerHand().getValueFromEnum());
