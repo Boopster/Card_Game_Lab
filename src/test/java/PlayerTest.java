@@ -26,4 +26,10 @@ public class PlayerTest {
         assertEquals(0, player.countNoCardsPlayerHand());
     }
 
+    @Test
+    public void canGetCardsPlayerHand() {
+        System.out.println(player.getCardsPlayerHand());
+        System.out.println(dealer.getCardsPlayerHand());
+    }
+
 }

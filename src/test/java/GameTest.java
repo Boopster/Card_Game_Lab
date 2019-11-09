@@ -20,7 +20,9 @@ public class GameTest {
         player2 = new Player("Lily-Rose");
         game.addPlayer(player1);
         game.addPlayer(player2);
-        game.addCardsToHand();
+        game.addCardToHand();
+        game.addCardToHand();
+
     }
 
     @Test
@@ -38,6 +40,12 @@ public class GameTest {
     public void canGetTotalPlayerHand() {
         System.out.println(player1.getName() + "'s hand: " + player1.getTotalPlayerHand());
         System.out.println("The Dealer's hand: " + player2.getTotalPlayerHand());
+    }
+
+    @Test
+    public void canTwist() {
+        game.playerTwist("y", player1);
+        assertEquals(3,player1.countNoCardsPlayerHand());
     }
 
 //    @Test

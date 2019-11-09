@@ -25,14 +25,19 @@ public class Game {
         return this.players.size();
     }
 
-    public void addCardsToHand() {
+    public void addCardToHand() {
         deck.populateDeck();
         deck.shuffleDeck();
         for (Player player: players) {
-            Card card1 = deck.dealCard();
-            Card card2 = deck.dealCard();
-            player.addCardToPlayerHand(card1);
-            player.addCardToPlayerHand(card2);
+            Card card = deck.dealCard();
+            player.addCardToPlayerHand(card);
+        }
+    }
+
+    public void playerTwist(String twist, Player player) {
+        if (twist.equals("y")) {
+            Card card = deck.dealCard();
+            player.addCardToPlayerHand(card);
         }
     }
 
