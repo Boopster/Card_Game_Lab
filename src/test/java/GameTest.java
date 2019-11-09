@@ -44,7 +44,7 @@ public class GameTest {
 
     @Test
     public void canTwist() {
-        game.playerTwist("y", player1, player2);
+        game.playerTwist(player1);
         assertEquals(3,player1.countNoCardsPlayerHand());
     }
 

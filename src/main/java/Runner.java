@@ -28,14 +28,16 @@ public class Runner {
 
         String twist = scanner.next();
 
-        game.playerTwist(twist, player1, player2);
-
         if (twist.equals("y")) {
+            game.playerTwist(player1);
             for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {
                 System.out.println(player1.showCard(i));
-
             }
+            System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getTotalPlayerHand()));
+            System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
+            twist = scanner.next();
         } else {
+            game.dealerTwist(player1, player2);
             for (int i = 0; i < player2.countNoCardsPlayerHand(); i++) {
                 System.out.println(player2.showCard(i));
             }
