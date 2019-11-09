@@ -21,6 +21,10 @@ public class Runner {
         int total1 = player1.getTotalPlayerHand();
         int total2 = player2.getTotalPlayerHand();
 
+        System.out.println(String.format("----------------"));
+        System.out.println(String.format("%s's hand:", player1.getName()));
+        System.out.println(String.format("----------------"));
+
         for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {
             System.out.println(player1.showCard(i));
         }
@@ -30,6 +34,10 @@ public class Runner {
         System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
 
         String twist = scanner.next();
+
+        System.out.println(String.format("----------------"));
+        System.out.println(String.format("%s's hand:", player1.getName()));
+        System.out.println(String.format("----------------"));
 
             do {
                 game.playerTwist(player1);
@@ -42,7 +50,14 @@ public class Runner {
                 twist = scanner.next();
             } while (twist.equals("y"));
 
-        game.dealerTwist(player1, player2);
+        do {
+            game.dealerTwist(player1, player2);
+            total2 = player2.getTotalPlayerHand();
+        } while (total2 < 16);
+
+        System.out.println(String.format("----------------"));
+        System.out.println(String.format("The Dealer's hand:"));
+        System.out.println(String.format("----------------"));
 
         for (int i = 0; i < player2.countNoCardsPlayerHand(); i++) {
             System.out.println(player2.showCard(i));

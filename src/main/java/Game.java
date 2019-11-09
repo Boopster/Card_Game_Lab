@@ -50,19 +50,21 @@ public class Game {
     public void dealerTwist(Player player1, Player player2) {
         int total1 = player1.getTotalPlayerHand();
         int total2 = player2.getTotalPlayerHand();
-        if (total1 > total2) {
+        if (total2 <= 16) {
             this.playerTwist(player2);
         }
     }
 
     public String getResult(Player player1, Player player2) {
-        if (player1.getTotalPlayerHand() > player2.getTotalPlayerHand()) {
+        int total1 = player1.getTotalPlayerHand();
+        int total2 = player2.getTotalPlayerHand();
+        if (total1 <= 21 && total1 > total2 || total2 > 21) {
             String output = String.format("%s is the winner!", player1.getName());
             return output;
-        } else if (player1.getTotalPlayerHand() == player2.getTotalPlayerHand()) {
+        } else if (total1 == total2) {
                 return "It's a draw!";
             } else {
-                return "The dealer is the winner!";
+                return "The Dealer is the winner!";
             }
         }
     }
