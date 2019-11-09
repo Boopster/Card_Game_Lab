@@ -26,12 +26,20 @@ public class Game {
     }
 
     public void addCardToHand() {
-        deck.populateDeck();
-        deck.shuffleDeck();
+
         for (Player player: players) {
             Card card = deck.dealCard();
             player.addCardToPlayerHand(card);
         }
+    }
+
+    public void startGame(Player player1, Player player2) {
+        deck.populateDeck();
+        deck.shuffleDeck();
+        this.addPlayer(player1);
+        this.addPlayer(player2);
+        this.addCardToHand();
+        this.addCardToHand();
     }
 
     public void playerTwist(String twist, Player player1, Player player2) {
@@ -48,8 +56,6 @@ public class Game {
                 player2.addCardToPlayerHand(card);
         }
     }
-
-
 
 //    public String getResult(Player player1, Player player2) {
 //        if (player1.getPlayerHand().getValueFromEnum() > player2.getPlayerHand().getValueFromEnum()) {
