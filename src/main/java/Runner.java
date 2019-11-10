@@ -58,12 +58,13 @@ public class Runner {
                     }
                 }
             } while (twist.equals("y"));
+
+        } else {
+            System.out.println(String.format("%s's Total: 21 - BLACKJACK!!!!!", player1.getName()));
         }
 
-        System.out.println(String.format("%s's Total: 21 - BLACKJACK!!!!!", player1.getName()));
-
         do {
-            game.dealerTwist(player1, player2);
+            game.dealerTwist(player2);
             total2 = player2.getTotalPlayerHand();
         } while (total2 < 16);
 
@@ -76,9 +77,9 @@ public class Runner {
         }
         total2 = player2.getTotalPlayerHand();
         System.out.println(String.format("The Dealer's Total: %s", total2));
-        System.out.println(String.format("-------------------------------"));
+        System.out.println(String.format("-------------------------"));
         System.out.println(game.getResult(player1, player2));
-        System.out.println(String.format("-------------------------------"));
+        System.out.println(String.format("-------------------------"));
 
     }
 

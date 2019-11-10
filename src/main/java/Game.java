@@ -47,8 +47,7 @@ public class Game {
         player.addCardToPlayerHand(card);
     }
 
-    public void dealerTwist(Player player1, Player player2) {
-        int total1 = player1.getTotalPlayerHand();
+    public void dealerTwist(Player player2) {
         int total2 = player2.getTotalPlayerHand();
         if (total2 <= 16) {
             this.playerTwist(player2);
