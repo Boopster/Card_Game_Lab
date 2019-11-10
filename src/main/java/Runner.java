@@ -19,6 +19,7 @@ public class Runner {
 
         game.startGame(player1, player2);
         int total1 = player1.getTotalPlayerHand();
+        int total1a = player1.getOtherTotalPlayerHand();
         int total2 = player2.getTotalPlayerHand();
 
         System.out.println(String.format("----------------"));
@@ -29,11 +30,14 @@ public class Runner {
             System.out.println(player1.showCard(i));
         }
 
-        total1 = player1.getTotalPlayerHand();
-        System.out.println(String.format("%s's Total: %s", player1.getName(), total1));
-        System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
+        if (total1a != 21) {
 
-        String twist = scanner.next();
+            total1 = player1.getTotalPlayerHand();
+
+            System.out.println(String.format("%s's Total: %s", player1.getName(), total1));
+            System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
+
+            String twist = scanner.next();
 
             do {
                 if (twist.equals("y")) {
@@ -54,6 +58,9 @@ public class Runner {
                     }
                 }
             } while (twist.equals("y"));
+        }
+
+        System.out.println(String.format("%s's Total: 21 - BLACKJACK!!!!!", player1.getName()));
 
         do {
             game.dealerTwist(player1, player2);
@@ -68,11 +75,10 @@ public class Runner {
             System.out.println(player2.showCard(i));
         }
         total2 = player2.getTotalPlayerHand();
-        System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getStringPlayerHand()));
         System.out.println(String.format("The Dealer's Total: %s", total2));
-        System.out.println(String.format("----------------------------------"));
+        System.out.println(String.format("-------------------------------"));
         System.out.println(game.getResult(player1, player2));
-        System.out.println(String.format("----------------------------------"));
+        System.out.println(String.format("-------------------------------"));
 
     }
 
