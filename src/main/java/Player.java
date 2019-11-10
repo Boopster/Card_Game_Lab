@@ -25,7 +25,6 @@ public class Player {
 
     public int getTotalPlayerHand() {
         int i = 0;
-        String output = null;
         for(Card card:playerHand) {
             i += card.getValueFromEnum();
         }
