@@ -56,8 +56,12 @@ public class Game {
 
     public String getResult(Player player1, Player player2) {
         int total1 = player1.getTotalPlayerHand();
+        int total1a = player1.getOtherTotalPlayerHand();
         int total2 = player2.getTotalPlayerHand();
-        if (total1 <= 21 && total1 > total2 || total2 > 21) {
+        if (total1a == 21) {
+            String output = String.format("%s is the winner!", player1.getName());
+            return output;
+        } else if (total1 <= 21 && total1 > total2 || total2 > 21) {
             String output = String.format("%s is the winner!", player1.getName());
             return output;
         } else if (total1 == total2) {
