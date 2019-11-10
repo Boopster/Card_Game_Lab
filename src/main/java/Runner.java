@@ -28,7 +28,11 @@ public class Runner {
 //        int total1 = player1.getTotalPlayerHand();
 //        int total1a = player1.getOtherTotalPlayerHand();
 //        int total2 = player2.getTotalPlayerHand();
-
+            System.out.println(String.format("------------------"));
+            System.out.println(String.format("The Dealer's hand:"));
+            System.out.println(String.format("------------------"));
+            System.out.println(player2.showCard(0));
+            System.out.println("????? of ?????");
             System.out.println(String.format("----------------"));
             System.out.println(String.format("%s's hand:", player1.getName()));
             System.out.println(String.format("----------------"));
@@ -56,6 +60,7 @@ public class Runner {
                         for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {
                             System.out.println(player1.showCard(i));
                         }
+
                         total1 = player1.getTotalPlayerHand();
                         System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getStringPlayerHand()));
                         if (total1 < 21) {
