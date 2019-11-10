@@ -38,8 +38,8 @@ public class GameTest {
 
     @Test
     public void canGetTotalPlayerHand() {
-        System.out.println(player1.getName() + "'s hand: " + player1.getTotalPlayerHand());
-        System.out.println("The Dealer's hand: " + player2.getTotalPlayerHand());
+        System.out.println(player1.getName() + "'s hand: " + player1.getFirstTotalPlayerHand());
+        System.out.println("The Dealer's hand: " + player2.getFirstTotalPlayerHand());
     }
 
     @Test

@@ -48,16 +48,16 @@ public class Game {
     }
 
     public void dealerTwist(Player player1, Player player2) {
-        int total1 = player1.getTotalPlayerHand();
-        int total2 = player2.getTotalPlayerHand();
+        int total1 = player1.getFirstTotalPlayerHand();
+        int total2 = player2.getFirstTotalPlayerHand();
         if (total2 <= 16) {
             this.playerTwist(player2);
         }
     }
 
     public String getResult(Player player1, Player player2) {
-        int total1 = player1.getTotalPlayerHand();
-        int total2 = player2.getTotalPlayerHand();
+        int total1 = player1.getFirstTotalPlayerHand();
+        int total2 = player2.getFirstTotalPlayerHand();
         if (total1 <= 21 && total1 > total2 || total2 > 21) {
             String output = String.format("%s is the winner!", player1.getName());
             return output;

@@ -23,11 +23,18 @@ public class Player {
         this.playerHand.add(card);
     }
 
-    public int getTotalPlayerHand() {
+    public int getFirstTotalPlayerHand() {
         int i = 0;
-        String output = null;
         for(Card card:playerHand) {
             i += card.getValueFromEnum();
+        }
+        return i;
+    }
+
+    public int getSecondTotalPlayerHand() {
+        int i = 0;
+        for(Card card:playerHand) {
+            i += card.getOtherValueFromEnum();
         }
         return i;
     }
