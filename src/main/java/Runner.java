@@ -35,19 +35,24 @@ public class Runner {
 
         String twist = scanner.next();
 
-        System.out.println(String.format("----------------"));
-        System.out.println(String.format("%s's hand:", player1.getName()));
-        System.out.println(String.format("----------------"));
-
             do {
-                game.playerTwist(player1);
-                for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {
-                    System.out.println(player1.showCard(i));
+                if (twist.equals("y")) {
+                    System.out.println(String.format("----------------"));
+                    System.out.println(String.format("%s's hand:", player1.getName()));
+                    System.out.println(String.format("----------------"));
+                    game.playerTwist(player1);
+                    for (int i = 0; i < player1.countNoCardsPlayerHand(); i++) {
+                        System.out.println(player1.showCard(i));
+                    }
+                    total1 = player1.getTotalPlayerHand();
+                    System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getStringPlayerHand()));
+                    if (total1 < 21) {
+                        System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
+                        twist = scanner.next();
+                    } else {
+                        twist = "n";
+                    }
                 }
-                total1 = player1.getTotalPlayerHand();
-                System.out.println(String.format("%s's Total: %s", player1.getName(), total1));
-                System.out.println(String.format("%s, would you like to twist? (y/n)", player1.getName()));
-                twist = scanner.next();
             } while (twist.equals("y"));
 
         do {
@@ -55,17 +60,19 @@ public class Runner {
             total2 = player2.getTotalPlayerHand();
         } while (total2 < 16);
 
-        System.out.println(String.format("----------------"));
+        System.out.println(String.format("------------------"));
         System.out.println(String.format("The Dealer's hand:"));
-        System.out.println(String.format("----------------"));
+        System.out.println(String.format("------------------"));
 
         for (int i = 0; i < player2.countNoCardsPlayerHand(); i++) {
             System.out.println(player2.showCard(i));
         }
         total2 = player2.getTotalPlayerHand();
-        System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getTotalPlayerHand()));
+        System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getStringPlayerHand()));
         System.out.println(String.format("The Dealer's Total: %s", total2));
+        System.out.println(String.format("--------------------------"));
         System.out.println(game.getResult(player1, player2));
+        System.out.println(String.format("--------------------------"));
 
     }
 

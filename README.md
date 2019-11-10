@@ -1,4 +1,4 @@
-Weekend Homework - Blackjack
+## Weekend Homework - Blackjack
 ⭐️ This is a PDA Homework ⭐️
 
 Extend your High/Low card game Using your existing code (fork it!) simulate a game of "BlackJack".

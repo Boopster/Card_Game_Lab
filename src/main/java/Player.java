@@ -25,10 +25,24 @@ public class Player {
 
     public int getTotalPlayerHand() {
         int i = 0;
+        String output = null;
         for(Card card:playerHand) {
             i += card.getValueFromEnum();
         }
         return i;
+    }
+
+    public String getStringPlayerHand() {
+        int i = 0;
+        String output = null;
+        for(Card card:playerHand) {
+            i += card.getValueFromEnum();
+        }
+        if (i > 21) {
+            output = String.format("%s: BUST!!!!", i);
+        } else {
+            output = String.format(String.valueOf(i));
+        } return output;
     }
 
     public String showCard(int index){
