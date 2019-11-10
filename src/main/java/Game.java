@@ -45,6 +45,7 @@ public class Game {
     public void playerTwist(Player player) {
         Card card = deck.dealCard();
         player.addCardToPlayerHand(card);
+//        this.addCardToHand();
     }
 
     public void dealerTwist(Player player2) {
