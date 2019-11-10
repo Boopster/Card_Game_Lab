@@ -1,4 +1,3 @@
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,11 +16,12 @@ public class GameTest {
     public void before() {
         game = new Game();
         player1 = new Player("Becky");
-        player2 = new Player("Lily-Rose");
-        game.addPlayer(player1);
-        game.addPlayer(player2);
-        game.addCardToHand();
-        game.addCardToHand();
+        player2 = new Player("Dealer");
+        game.startGame(player1, player2);
+//        game.addPlayer(player1);
+//        game.addPlayer(player2);
+//        game.addCardToHand();
+//        game.addCardToHand();
 
     }
 
@@ -40,6 +40,12 @@ public class GameTest {
     public void canGetTotalPlayerHand() {
         System.out.println(player1.getName() + "'s hand: " + player1.getTotalPlayerHand());
         System.out.println("The Dealer's hand: " + player2.getTotalPlayerHand());
+    }
+
+    @Test
+    public void canGetOtherTotalPlayerHand() {
+        System.out.println(player1.getName() + "'s hand: " + player1.getOtherTotalPlayerHand());
+        System.out.println("The Dealer's hand: " + player2.getOtherTotalPlayerHand());
     }
 
     @Test

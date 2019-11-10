@@ -70,9 +70,9 @@ public class Runner {
         total2 = player2.getTotalPlayerHand();
         System.out.println(String.format("%s's Total: %s", player1.getName(), player1.getStringPlayerHand()));
         System.out.println(String.format("The Dealer's Total: %s", total2));
-        System.out.println(String.format("--------------------------"));
+        System.out.println(String.format("----------------------------------"));
         System.out.println(game.getResult(player1, player2));
-        System.out.println(String.format("--------------------------"));
+        System.out.println(String.format("----------------------------------"));
 
     }
 

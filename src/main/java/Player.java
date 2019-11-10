@@ -31,6 +31,14 @@ public class Player {
         return i;
     }
 
+    public int getOtherTotalPlayerHand() {
+        int i = 0;
+        for (Card card:playerHand) {
+            i += card.getOtherValueFromEnum();
+        }
+        return i;
+    }
+
     public String getStringPlayerHand() {
         int i = 0;
         String output = null;
