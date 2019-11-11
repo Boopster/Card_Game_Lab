@@ -14,7 +14,7 @@ public class GameTest {
 
     @Before
     public void before() {
-        game = new Game();
+        game = new Game(0,0);
         player1 = new Player("Becky");
         player2 = new Player("Dealer");
         game.startGame(player1, player2);

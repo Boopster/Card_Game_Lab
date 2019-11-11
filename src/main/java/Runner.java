@@ -5,8 +5,7 @@ public class Runner {
 
         Scanner scanner = new Scanner(System.in);
 
-        Game game = new Game();
-        Deck deck = new Deck();
+        Game game = new Game(0,0);
 
 
         System.out.println("---------");
@@ -94,6 +93,8 @@ public class Runner {
             System.out.println(String.format("-------------------------"));
             System.out.println(game.getResult(player1, player2));
             System.out.println(String.format("-------------------------"));
+            System.out.println(String.format("%s's Total Games Won: %s",player1.getName(),game.getPlayer1Total()));
+            System.out.println(String.format("The Dealer's Total Games Won: %s",game.getPlayer2Total()));
             System.out.println(String.format("Would you like to play again? (y/n)"));
             play = scanner.next();
 
