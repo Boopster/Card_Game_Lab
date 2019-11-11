@@ -89,9 +89,9 @@ public class Game {
             String output = String.format("%s is the winner!", player1.getName());
             return output;
         } else if (total1 == total2) {
-            this.setPlayer2Total();
                 return "It's a draw!";
             } else {
+            this.setPlayer2Total();
                 return "The Dealer is the winner!";
             }
         }

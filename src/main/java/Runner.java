@@ -7,15 +7,12 @@ public class Runner {
 
         Game game = new Game(0,0);
 
-
         System.out.println("---------");
         System.out.println("Blackjack");
         System.out.println("---------");
         System.out.println("Please enter your name: ");
 
         String playerName = scanner.next();
-
-
 
         String play = "y";
 

@@ -31,6 +31,20 @@ public class Player {
         return i;
     }
 
+//    reverse values in enums for method below to work
+
+//    public int getTotalPlayerHand() {
+//        int total = 0;
+//        for (Card card : this.player) {
+//            if ((card.getValueFromEnum() == 11 && (total > 21) {
+//                total += 1;
+//            } else {
+//                total += card.getValueFromEnum()
+//            }
+//            return total;
+//        }
+//    }
+
     public int getOtherTotalPlayerHand() {
         int i = 0;
         for (Card card:playerHand) {
